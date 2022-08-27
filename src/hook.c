@@ -878,7 +878,7 @@ MH_STATUS WINAPI MH_CreateHookApiEx(
 
     pTarget = (LPVOID)GetProcAddress(hModule, pszProcName);
     if (pTarget == NULL)
-        return MH_ERROR_FUNCTION_NOT_FOUND;
+        return MH_ERROR_FUNCTION_CANT_BE_FOUND;
 
     if(ppTarget != NULL)
         *ppTarget = pTarget;
@@ -914,7 +914,7 @@ const char * WINAPI MH_StatusToString(MH_STATUS status)
         MH_ST2STR(MH_ERROR_MEMORY_ALLOC)
         MH_ST2STR(MH_ERROR_MEMORY_PROTECT)
         MH_ST2STR(MH_ERROR_MODULE_NOT_FOUND)
-        MH_ST2STR(MH_ERROR_FUNCTION_NOT_FOUND)
+        MH_ST2STR(MH_ERROR_FUNCTION_CANT_BE_FOUND)
     }
 
 #undef MH_ST2STR

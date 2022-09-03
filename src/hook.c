@@ -644,7 +644,7 @@ MH_STATUS WINAPI MH_CreateHook(LPVOID pTarget, LPVOID pDetour, LPVOID *ppOrigina
         }
         else
         {
-            status = MH_ERROR_NOT_EXECUTABLE;
+            status = MH_ERROR_NO_EXEC;
         }
     }
     else
@@ -909,7 +909,7 @@ const char * WINAPI MH_StatusToString(MH_STATUS status)
         MH_ST2STR(MH_ERROR_NOT_CREATED)
         MH_ST2STR(MH_ERROR_ENABLED)
         MH_ST2STR(MH_ERROR_DISABLED)
-        MH_ST2STR(MH_ERROR_NOT_EXECUTABLE)
+        MH_ST2STR(MH_ERROR_NO_EXEC)
         MH_ST2STR(MH_ERROR_UNSUPPORTED_FUNCTION)
         MH_ST2STR(MH_ERROR_MEMORY_ALLOC)
         MH_ST2STR(MH_ERROR_MEMORY_PROTECT)

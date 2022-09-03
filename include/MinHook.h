@@ -64,7 +64,7 @@ typedef enum MH_STATUS
 
     // The specified pointer is invalid. It points the address of non-allocated
     // and/or non-executable region.
-    MH_ERROR_NOT_EXECUTABLE,
+    MH_ERROR_NO_EXEC,
 
     // The specified target function cannot be hooked.
     MH_ERROR_UNSUPPORTED_FUNCTION,
